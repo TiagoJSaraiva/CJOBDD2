@@ -4,7 +4,7 @@ ELSE
 	USE LojaIFSP;
 GO
 
-SELECT create_date AS 'Data de criaÁ„o',
+SELECT create_date AS 'Data de cria√ß√£o',
 	   name		   AS 'Nome da tabela'
 FROM sys.tables;
 GO
@@ -23,14 +23,14 @@ INSERT INTO CLIENTES VALUES
 	(1, 'Ana Cristina', 'F', 20, '11111111111', 'ana@gmail.com');
 GO
 
--- ERRO. CHAVE PRIM¡RIA J¡ USADA
+-- ERRO. CHAVE PRIM√ÅRIA J√Å USADA
 INSERT INTO CLIENTES VALUES
 	(1, 'Marcos Paulo', 'M', 45, '22222222222', 'marcos@gmail.com');
 GO
 
 -- ERRO. IDADE INFERIOR A 18
 INSERT INTO CLIENTES VALUES
-	(3, 'AndrÈ Luiz', 'M', 15, '33333333333', 'andre@gmail.com');
+	(3, 'Andr√© Luiz', 'M', 15, '33333333333', 'andre@gmail.com');
 GO
 
 
@@ -48,9 +48,9 @@ INSERT INTO CLIENTES VALUES
 	(6, 'Ricardo Lima', 'M', 52, NULL, 'ricardo@gmail.com');
 GO
 
--- ERRO. CHAVE PRIM¡RIA NULA
+-- ERRO. CHAVE PRIM√ÅRIA NULA
 INSERT INTO CLIENTES VALUES
-	(NULL, 'JosÈ Pereira', 'M', 45, '77777777777', 'marcos@gmail.com');
+	(NULL, 'Jos√© Pereira', 'M', 45, '77777777777', 'marcos@gmail.com');
 GO
 
 -- ERRO. QUANTIDADE DE CARACTERES ACEITOS EXCEDIDOS EM 'Sexo'
@@ -69,10 +69,10 @@ GO
 -- INSERE OS REGISTROS, CORRIGINDO ERROS
 INSERT INTO CLIENTES VALUES
 	(2, 'Marcos Paulo', 'M', 45, '22222222222', 'marcos@gmail.com'),
-	(3, 'AndrÈ Luiz', 'M', 25, '33333333333', 'andre@gmail.com'),
+	(3, 'Andr√© Luiz', 'M', 25, '33333333333', 'andre@gmail.com'),
 	(5, 'Pedro Augusto', 'M', 45, '55555555555', 'pedro@gmail.com'),
 	(6, 'Ricardo Lima', 'M', 52, '66666666666', 'ricardo@gmail.com'),
-	(7, 'JosÈ Pereira', 'M', 45, '77777777777', 'jose@gmail.com'),
+	(7, 'Jos√© Pereira', 'M', 45, '77777777777', 'jose@gmail.com'),
 	(8, 'Marcelo Souza', 'M', 56, '88888888888', 'marcelo@gmail.com'),
 	(10, 'Sheila Pereira', NULL, 21, '10101010101', 'sheila@yahoo.com'),
 	(11, 'Tiago Augusto', NULL, 70, '20202020202', 'tiago@yahoo.com'),
@@ -90,10 +90,10 @@ INSERT INTO CLIENTES (ID, Nome, Sexo, Idade, CPF)
 		(15, 'Fernanda Pereira', 'F', 31, '60606060606');
 GO
 
--- EXIBE INFORMA«’ES SOBRE A ESTRUTURA DA TABELA
+-- EXIBE INFORMA√á√ïES SOBRE A ESTRUTURA DA TABELA
 SELECT TABLE_CATALOG	AS 'Banco de dados',
 	   TABLE_NAME		AS 'Tabela',
-	   ORDINAL_POSITION AS 'PosiÁ„o',
+	   ORDINAL_POSITION AS 'Posi√ß√£o',
 	   COLUMN_NAME		AS 'Coluna',
 	   DATA_TYPE		AS 'Tipo de dado',
 	   COLLATION_NAME	AS 'Idioma da Coluna',
@@ -102,11 +102,11 @@ FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'CLIENTES';
 GO
 
--- EXIBE INFORMA«’ES SOBRE AS RESTRI«’ES DA TABELA
+-- EXIBE INFORMA√á√ïES SOBRE AS RESTRI√á√ïES DA TABELA
 SELECT CONSTRAINT_CATALOG AS 'Banco de dados',
 	   TABLE_NAME		  AS 'Tabela',
-	   CONSTRAINT_TYPE	  AS 'Tipo de restriÁ„o',
-	   CONSTRAINT_NAME	  AS 'Nome de restriÁ„o'
+	   CONSTRAINT_TYPE	  AS 'Tipo de restri√ß√£o',
+	   CONSTRAINT_NAME	  AS 'Nome de restri√ß√£o'
 FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
 WHERE TABLE_NAME = 'CLIENTES';
 GO
@@ -115,7 +115,7 @@ GO
 EXEC sp_help 'CLIENTES';
 GO
 
---QUEST’ES
+--EXERC√çCIOS
 
 -- 1.
 SELECT * FROM CLIENTES;
